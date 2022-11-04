@@ -6,14 +6,19 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "electron:build": "vue-cli-service electron:build",
-    "electron:serve": "vue-cli-service electron:serve",
+    "electron:build": "yarn generatePreload && vue-cli-service electron:build && yarn removePreload",
+    "electron:serve": "yarn generatePreload && vue-cli-service electron:serve",
     "postinstall": "electron-builder install-app-deps",
-    "postuninstall": "electron-builder install-app-deps"
+    "postuninstall": "electron-builder install-app-deps",
+    "generatePreload": "node ./generate-preload.js",
+    "removePreload": "node ./remove-preload.js"
   },
   "main": "background.js",
   "dependencies": {
+    "client-ipc-event": "0.0.9",
+    "client-layout": "0.1.0",
     "core-js": "^3.8.3",
+    "electron-screenshots": "^0.5.13",
     "vue": "^2.6.14"
   },
   "devDependencies": {
