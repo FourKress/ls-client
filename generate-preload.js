@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 const buffer = fs.readFileSync(
-  "./node_modules/client-ipc-event/src/preload.js"
+  "./node_modules/@lanshu/main-process/src/preload.js"
 );
 
 const filePath = "./src/preload.js";

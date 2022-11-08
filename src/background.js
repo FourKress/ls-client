@@ -1,4 +1,4 @@
-import { initElectron, initIpcMain } from "client-ipc-event";
+import { initElectron, initIpcMain } from "@lanshu/main-process";
 
 initElectron().then(({ BrowserWindow }) => {
   // console.log(App)

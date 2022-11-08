@@ -1,3 +1,3 @@
-import { ClientLayout } from "client-layout";
+import {Layout} from '@lanshu/layout'
 
-ClientLayout();
+Layout();
