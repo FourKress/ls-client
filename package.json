@@ -13,6 +13,7 @@
     "generatePreload": "node ./generate-preload.js",
     "removePreload": "node ./remove-preload.js"
   },
+  "main": "background.js",
   "dependencies": {
     "@lanshu/layout": "^0.1.0",
     "@lanshu/main-process": "^0.1.0",
